@@ -38,6 +38,20 @@ Clonar o Projeto `https://github.com/wellalencarweb/tech-challenge-fiap-fase-02.
 8) Metrics: `kubectl apply -f metrics.yaml`
 9) HPA: `kubectl apply -f hpa.yaml`
 
+Exemplos de execução
+- minikube star
+  ![minikube_start](docs/k8s/minikube_start.png)
+- commands kubernets
+  ![kubectl_commands](docs/k8s/kubectl_commands.png)
+- IP Load Balancer
+  ![minikube_load_balancer](docs/k8s/minikube_load_balancer.png)
+- Doc Swagger
+  ![api_swagger](docs/k8s/api_swagger.png)
+- Minikube Dashboard
+  ![minikube_dashboard](docs/k8s/minikube_dashboard.png)
+  ![workload](docs/k8s/workload.png)
+  ![cluster](docs/k8s/cluster.png)
+
 ## Acesso
 1) Execute `minikube service app-load-balancer --url`(irá exibir o ip do loadBalancer)
 2) Acesse a API e DOCs http://**ip-load-balancer**:**port-load-balancer**/api-docs
@@ -57,7 +71,11 @@ Clonar o Projeto `https://github.com/wellalencarweb/tech-challenge-fiap-fase-02.
 ## k6 Stress Test
 * É possível realizar os testes de stress via k6 (o mesmo precisa estar devidamente instalado na sua máquia)
 * Acesse o diretório  **k8s/stress_tes** e execute `k6 run script.js`
-* Caso esteja usando o Kubernets
+* Caso esteja usando o Kubernets, mude no arquivo script.js a var `URL` para o IP do LoadBalancer
+
+- Execução Stress test k6
+![minikube_dashboard](docs/k8s/k6_stress_test.png)
+
 ## Documentação da API
 * Disponível no endereço [http://localhost:6001/api-docs](http://localhost:6001/api-docs)
 
