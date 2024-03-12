@@ -2,7 +2,7 @@ import http from 'k6/http';
 import { sleep } from 'k6';
 
 
-const URL = '127.0.0.1:55421'; // Se LOAD_BALANCER_IP não estiver definido, use 'localhost'
+const URL = 'http://localhost:6001'; // Caso use o Kubernets, coloque o endereço do LoadBalancer aqui ex.: '127.0.0.1:55421'
 
 export const options = {
   vus: 4000,
