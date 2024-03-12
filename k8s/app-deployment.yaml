@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: wellalencar/tech-challenge-fiap_fast-food
+          image: wellalencar/tech-challenge-fiap-02_fast-food
           command: ["sh", "-c", "npm run start"]
           ports:
             - containerPort: 6001

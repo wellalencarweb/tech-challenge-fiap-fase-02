@@ -42,6 +42,11 @@ Clonar o Projeto `https://github.com/wellalencarweb/tech-challenge-fiap-fase-02.
 1) Execute `minikube service app-load-balancer --url`(irá exibir o ip do loadBalancer)
 2) Acesse a API e DOCs http://**ip-load-balancer**:**port-load-balancer**/api-docs
 
+## Desinstalação
+1) Verifique se está no contexto do minikube: `kubectx` 
+2) Delete todos os componentes: `kubectl delete all --all`
+3) Pare o minikube: `minikube stop`
+
 ## Instalação via Docker
 
 1) Após clonar o projeto acesse `cd tech-challenge-fiap-fase-02`
