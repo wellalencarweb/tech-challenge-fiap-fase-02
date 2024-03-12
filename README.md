@@ -28,7 +28,7 @@ Clonar o Projeto `https://github.com/wellalencarweb/tech-challenge-fiap-fase-02.
 
 
 ## Instalação via Kubernets
-1) Start minikube: `minikube start`
+1) Start minikube: `minikube start` (isso demora uns minutos)
 2) Acesse o diretório `cd tech-challenge-fiap-fase-02` e depois `cd k8s`
 3) Execute as secrets: `kubectl apply -f secret-opaque.yaml`
 4) Execute o POD do BD (sem volume): `kubectl apply -f mongodb-pod.yaml`
@@ -53,6 +53,11 @@ Clonar o Projeto `https://github.com/wellalencarweb/tech-challenge-fiap-fase-02.
 2) Execute: `docker compose -f docker-compose.yml up -d`
 3) Ficará disponível no endereço [http://localhost:6001/](http://localhost:6001/), rodando na porta `:6001`
 
+
+## k6 Stress Test
+* É possível realizar os testes de stress via k6 (o mesmo precisa estar devidamente instalado na sua máquia)
+* Acesse o diretório  **k8s/stress_tes** e execute `k6 run script.js`
+* Caso esteja usando o Kubernets
 ## Documentação da API
 * Disponível no endereço [http://localhost:6001/api-docs](http://localhost:6001/api-docs)
 
